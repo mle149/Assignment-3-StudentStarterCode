@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
@@ -25,17 +26,16 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 		
 		addKeyListener(this);
 		setFocusable(true);
-		
 		Timer timer = new Timer(5, this);
 		timer.start();
 		
-		// TODO: Create a new ball object and assign it to the appropriate variable
+		// : Create a new ball object and assign it to the appropriate variable
 		ball = new Ball();
-		// TODO: Create a new paddle object and assign it to the appropriate variable
+		// : Create a new paddle object and assign it to the appropriate variable
 		paddle = new Paddle();
 		// TODO: Create a new bricks array (Use Settings.TOTAL_BRICKS)
 		bricks = new Brick[Settings.TOTAL_BRICKS];
-		// TODO: Call the createBricks() method
+		// : Call the createBricks() method
 		createBricks();
 	}
 	
@@ -72,13 +72,13 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 	}
 	
 	private void gameOver() {
-		// TODO: Set screen message
+		// : Set screen message
 		stopGame();
 		screenMessage = "Game over, you lose.";
 	}
 	
 	private void gameWon() {
-		// TODO: Set screen message
+		// : Set screen message
 		stopGame();
 		screenMessage = "Congratulations, you win!";
 	}
