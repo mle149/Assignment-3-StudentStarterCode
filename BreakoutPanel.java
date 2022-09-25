@@ -204,6 +204,5 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 		update();
 	}
 
-//TODO: clear screenMessage & restart game
 
 }
