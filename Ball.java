@@ -7,9 +7,9 @@ public class Ball extends Sprite {
 	// Constructor
 	public Ball() {
 		// : Set width to Settings.BALL_WIDTH
-		setWidth(Settings.BALL_WIDTH);
+		width = Settings.BALL_WIDTH;
 		// : Set height to Settings.BALL_HEIGHT
-		setHeight(Settings.BALL_HEIGHT);
+		height = Settings.BALL_HEIGHT;
 		// : Call resetPosition
 		resetPosition();
 	}
@@ -38,9 +38,9 @@ public class Ball extends Sprite {
 		}
 		
 		// Bounce off right side of screen
-		if(x >= Settings.WINDOW_WIDTH - Settings.BALL_WIDTH) {
+		if(x >= 380) {
 			// : Set x to the right edge of the screen (see the above if condition)
-			x = (Settings.WINDOW_WIDTH - Settings.BALL_WIDTH);
+			x = 380;
 			// : Change the x velocity to make the ball go left
 			setXVelocity(-(getXVelocity()));
 		}

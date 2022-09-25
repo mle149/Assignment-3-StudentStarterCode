@@ -15,7 +15,7 @@ public class Brick extends Sprite {
 	}
 
 	public boolean isBroken() {
-		return true;	// : Return the correct variable
+		return broken;	// : Return the correct variable
 	}
 	public void setBroken(boolean b) {
 		// : Set the broken variable using the parameter given

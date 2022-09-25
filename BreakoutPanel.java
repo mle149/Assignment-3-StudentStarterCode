@@ -21,7 +21,7 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 	private Ball ball;
 	private Paddle paddle;
 	private Brick bricks[];
-	
+
 	public BreakoutPanel(Breakout game) {
 		
 		addKeyListener(this);
