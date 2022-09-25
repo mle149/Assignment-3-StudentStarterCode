@@ -63,7 +63,7 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 	
 	private void update() {
 		if(gameRunning) {
-			// TODO: Update the ball and paddle			
+			// : Update the ball and paddle			
 			ball.update();
 			paddle.update();
 			collisions();
@@ -162,7 +162,7 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
         paintBricks(g);
         
         // Draw lives left
-        // TODO: Draw lives left in the top left hand corner
+        // : Draw lives left in the top left hand corner
 		g.drawString(Integer.toString(livesLeft),0,0);
         
         // Draw screen message

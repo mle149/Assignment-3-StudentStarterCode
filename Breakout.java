@@ -14,7 +14,7 @@ public class Breakout extends JFrame{
 		// : Set the title
 		setTitle(Settings.WINDOW_NAME);
 		// : Set the background colour to white
-		setBackground(Color.white);
+		setBackground(Color.WHITE);
 		// : Set resizable to false
 		setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

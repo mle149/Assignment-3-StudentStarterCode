@@ -5,20 +5,16 @@ public class Sprite {
 	protected int x,y,width,height;
 	
 	// Note: This should only set a single value, they can be done in a single statement
-	public void setX(int x) {
-		// TODO
+	public void setX(int x) {		
 		this.x = x;
 	}
-	public void setY(int y) { 
-		// TODO
+	public void setY(int y) { 		
 		this.y = y;
 	}
-	public void setWidth(int width) { 
-		// TODO
+	public void setWidth(int width) { 	
 		this.width = width;
 	}
 	public void setHeight(int height) { 
-		// TODO
 		this.height = height;
 	}
 	
