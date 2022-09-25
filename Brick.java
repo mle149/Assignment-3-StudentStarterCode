@@ -19,7 +19,7 @@ public class Brick extends Sprite {
 	}
 	public void setBroken(boolean b) {
 		// : Set the broken variable using the parameter given
-		setBroken(b);
+		broken = b;
 	}
 	
 	public void paint(Graphics g) {

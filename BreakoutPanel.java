@@ -33,7 +33,7 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 		ball = new Ball();
 		// : Create a new paddle object and assign it to the appropriate variable
 		paddle = new Paddle();
-		// TODO: Create a new bricks array (Use Settings.TOTAL_BRICKS)
+		// : Create a new bricks array (Use Settings.TOTAL_BRICKS)
 		bricks = new Brick[Settings.TOTAL_BRICKS];
 		// : Call the createBricks() method
 		createBricks();
@@ -55,9 +55,9 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 	}
 	
 	private void paintBricks(Graphics g) {
-		// TODO: Loop through the bricks and call the paint() method
+		// : Loop through the bricks and call the paint() method
 		for(Brick brick: bricks) {
-			paint(g);
+			brick.paint(g);
 		}
 	}
 	
@@ -175,12 +175,23 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		// TODO: Set the velocity of the paddle depending on whether the player is pressing left or right
+		// : Set the velocity of the paddle depending on whether the player is pressing left or right
+		if(e.getKeyCode() == KeyEvent.VK_LEFT) {
+			paddle.setXVelocity(-5);
+		}
+		if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
+			paddle.setXVelocity(5);
+		}
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		// TODO: Set the velocity of the paddle after the player has released the keys
+		// : Set the velocity of the paddle after the player has released the keys
+		if(e.getKeyCode()==KeyEvent.VK_LEFT) {
+			paddle.setXVelocity(0);
+		}
+		else if (e.getKeyCode()==KeyEvent.VK_RIGHT)
+			paddle.setXVelocity(0);
 	}
 
 	@Override
