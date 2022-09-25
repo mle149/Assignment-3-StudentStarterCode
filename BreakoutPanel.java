@@ -30,11 +30,11 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 		timer.start();
 		
 		// TODO: Create a new ball object and assign it to the appropriate variable
-		Ball ball = new Ball();
+		ball = new Ball();
 		// TODO: Create a new paddle object and assign it to the appropriate variable
-		Paddle paddle = new Paddle();
+		paddle = new Paddle();
 		// TODO: Create a new bricks array (Use Settings.TOTAL_BRICKS)
-		
+		bricks = new Brick[Settings.TOTAL_BRICKS];
 		// TODO: Call the createBricks() method
 		createBricks();
 	}
@@ -56,12 +56,16 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 	
 	private void paintBricks(Graphics g) {
 		// TODO: Loop through the bricks and call the paint() method
+		for(Brick brick: bricks) {
+			paint(g);
+		}
 	}
 	
 	private void update() {
 		if(gameRunning) {
 			// TODO: Update the ball and paddle			
-			
+			ball.update();
+			paddle.update();
 			collisions();
 			repaint();
 		}
@@ -70,11 +74,13 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 	private void gameOver() {
 		// TODO: Set screen message
 		stopGame();
+		screenMessage = "Game over, you lose.";
 	}
 	
 	private void gameWon() {
 		// TODO: Set screen message
 		stopGame();
+		screenMessage = "Congratulations, you win!";
 	}
 	
 	private void stopGame() {
@@ -157,6 +163,7 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
         
         // Draw lives left
         // TODO: Draw lives left in the top left hand corner
+		g.drawString(Integer.toString(livesLeft),0,0);
         
         // Draw screen message
         if(screenMessage != null) {
